@@ -1,19 +1,40 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
-
+@font-face {
+    font-family: CheddarGothic-Serif;
+    src: url(./fonts/CheddarGothic-Serif.otf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     background-image: url(./img/fondo.png);
 }
-
+#header{
+height: 45rem;
+}
+.portada{
+    width: 100%;
+    height: 45rem;
+    overflow: hidden;
+    position: absolute;
+}
+.tituloA{
+position: relative;
+font-family: CheddarGothic-Serif;
+font-size: 4rem;
+color: white;
+text-shadow: 0px 0px 10px black;
+z-index: 100;
+display: flex;
+justify-content: center;
+left: 28rem;
+top: 25rem;
+}
 .titulo{
-    display: flex;
-    justify-content: center;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 700;
-    font-size: 5rem;
-    color: white;
-    text-shadow: 0px 0px 10px black;
-    margin: 25px 0 30px 0;
+    margin-left: 10px;
 }
 .escuchate{
     font-family: 'DM Sans', sans-serif;
@@ -23,11 +44,11 @@ body{
     font-weight: 500;
     text-align: center;
 }
-.single{
+.single img{
     width: 400px;
 }
 .insta{
-    width: 40px;
+    width: 50px;
     margin: 10px;
 }
 .texto{
@@ -41,10 +62,77 @@ body{
     font-size: 1.5rem;
     text-align: center;
     text-decoration: none;
+    margin-top: 5%;
+}
+.texte{
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    width: fit-content;
 }
 .flex{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 80%;
+    margin: auto;
+    background-color: black;
+    padding: 3% 0 3% 0;
+}
+.flexge{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    background-color: black;
+    padding: 3% 0 3% 0;
+}
+@media all and (max-width: 576px) {
+    #header{
+        height: 35rem;
+    }
+    .portada{
+        height: 35rem;
+    }
+    .tituloA{
+        flex-direction: column;
+        align-items: center;
+        left: 19rem;
+        top: 3rem;
+        font-size: 2.8rem;
+        width: 30px;
+    }
+    .flex{
+        flex-direction: column;
+        width: 90%;
+    }
+    .escuchate{
+        font-size: 1.3rem;
+    }
+    .single{
+        width: 80%;
+        margin: auto;
+    }
+    .single img{
+        width: 100%;
+        margin: 20px auto 15px auto;
+    }
+    .texte{
+        font-size: 1.2rem;
+    }
+    .insta{
+        width: 40px;
+        margin-top: 15px;
+    }
+    .text{
+        font-size: 1.3rem;
+    }
+    .texto{
+        width: 95%;
+    }
 }
